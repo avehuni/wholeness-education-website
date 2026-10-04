@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teacher Access · Teaching for Wholeness™</title>
+<link rel="icon" type="image/png" href="images/favicon-32.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="stylesheet" href="css/styles.css">
+<style>
+  .login-card{
+    max-width:800px; margin:0 auto; background:var(--white);
+    border-radius:16px; padding:52px; box-shadow:0 20px 48px rgba(0,0,0,0.09);
+    border:1px solid var(--sky-pale);
+    display:flex; align-items:center; gap:0;
+  }
+  .login-left{ flex:1 1 46%; text-align:left; padding-right:44px; }
+  .login-right{
+    flex:1 1 54%; padding-left:44px;
+    border-left:1px solid var(--sky-pale);
+  }
+  .login-card .mini-icon{ margin:0 0 22px; }
+  .login-card h2{ text-align:left; margin-bottom:10px; font-size:1.5rem; }
+  .login-card .sub{ text-align:left; opacity:0.72; font-size:0.88rem; margin-bottom:0; line-height:1.55; }
+  .login-right-eyebrow{
+    font-size:0.74rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase;
+    color:var(--anchor); margin-bottom:18px;
+  }
+  .login-field{ margin-bottom:16px; }
+  .login-field label{
+    display:block; font-size:0.74rem; font-weight:600; letter-spacing:0.08em;
+    text-transform:uppercase; color:var(--anchor-mid); margin-bottom:8px;
+  }
+  .login-field input{
+    width:100%; box-sizing:border-box; padding:13px 16px; font-size:1rem;
+    font-family:var(--font-body); border:1.5px solid var(--sky-pale); border-radius:10px;
+    background:var(--sky-ultra); color:var(--night); outline:none;
+    transition:border-color .15s, background .15s;
+  }
+  .login-field input:focus{ border-color:var(--brand-blue); background:var(--white); }
+  .login-submit{
+    width:100%; border:none; cursor:pointer; margin-top:6px;
+  }
+  .login-note{
+    text-align:left; font-size:0.82rem; opacity:0.7; margin-top:22px; line-height:1.5;
+  }
+  .login-note a{ color:var(--brand-blue); text-decoration:underline; }
+  .login-course-tag{
+    text-align:left; font-size:0.78rem; font-weight:600; letter-spacing:0.06em;
+    text-transform:uppercase; color:var(--brand-blue); background:var(--sky-ultra);
+    border-radius:999px; padding:8px 18px; display:inline-block; margin:0 0 22px;
+  }
+  .login-course-wrap{ text-align:left; }
+  .login-status{ text-align:left; font-size:0.92rem; margin-top:18px; display:none; }
+
+  @media (max-width:760px){
+    .login-card{ flex-direction:column; gap:0; padding:36px 28px; }
+    .login-left{ padding-right:0; padding-bottom:28px; }
+    .login-right{ flex:1 1 auto; padding-left:0; padding-top:28px; border-left:none; border-top:1px solid var(--sky-pale); }
+  }
+</style>
+<meta name="description" content="Educator access to Teaching for Wholeness™ through your school or district.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://wholenesseducation.com/teacher-login.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Wholeness Education">
+<meta property="og:title" content="Teacher Access · Teaching for Wholeness™">
+<meta property="og:description" content="Educator access to Teaching for Wholeness™ through your school or district.">
+<meta property="og:url" content="https://wholenesseducation.com/teacher-login.html">
+<meta property="og:image" content="https://wholenesseducation.com/images/og-card.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<script src="js/nav.js" defer></script>
+</head>
+<body data-pathway="educating">
+<svg style="display:none" aria-hidden="true">
+<defs>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 2.75 20 6v6c0 5.2-3.4 8.7-8 9.75C7.4 20.7 4 17.2 4 12V6z"/><path d="M8.5 12l2.3 2.3 4.7-4.7"/></symbol>
+<symbol id="i-key" viewBox="0 0 24 24"><circle cx="7.5" cy="16.5" r="4"/><path d="M10.6 13.4 18 6l2 2-1.7 1.7M18 8l2.5 2.5"/></symbol>
+</defs>
+</svg>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="brand"><img src="images/we-logo-nav.png" alt="Wholeness Education" class="brand-mark">Wholeness <strong>Education</strong></a>
+    <div class="nav-links">
+      <div class="nav-drop">
+        <span class="drop-trigger">About <span class="chev">▾</span></span>
+        <div class="dropdown-menu">
+          <a href="about.html">Our Story</a>
+          <a href="model.html">Our Model</a>
+          <a href="pathway-interconnections.html">Pathway Interconnections</a>
+          <a href="whole-human.html">The Whole Human</a>
+          <a href="team.html">Our Team</a>
+          <a href="press.html">Press &amp; Media</a>
+          <a href="faq.html">FAQ</a>
+          <a href="careers.html">Careers</a>
+        </div>
+      </div>
+      <a href="learning.html">For Youth</a>
+      <a href="parenting.html">For Parents</a>
+      <a href="educating.html" class="current">For Teachers</a>
+      <a href="schools.html">For Schools</a>
+    </div>
+    <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<header class="hero" style="padding-bottom:60px;">
+  <div class="wrap">
+    <p class="eyebrow">Teacher Access</p>
+    <h1>Continue with your <em>institutional email</em>.</h1>
+    <p class="lede" style="max-width:100%;">Teaching for Wholeness™ is provided through your school or district. Sign in with the email address your institution issued you to reach your courses, track your progress, and pick up your certification pathway.</p>
+  </div>
+</header>
+
+<section class="section-mist">
+  <div class="wrap">
+    <div class="login-card">
+      <div class="login-left">
+        <div class="mini-icon" style="width:52px; height:52px; display:flex; align-items:center; justify-content:center; border-radius:50%;">
+          <svg class="icon" style="width:24px; height:24px;"><use href="#i-shield"/></svg>
+        </div>
+        <div class="login-course-wrap">
+          <span class="login-course-tag" id="course-tag" style="display:none;"></span>
+        </div>
+        <h2>Sign in to your account</h2>
+        <p class="sub">Use the email address issued by your school or district. This keeps every course tied to your official teacher record and certification progress.</p>
+      </div>
+      <div class="login-right">
+        <p class="login-right-eyebrow">Get started</p>
+        <form id="login-form">
+          <div class="login-field">
+            <label for="inst-email">Institutional email address</label>
+            <input type="email" id="inst-email" name="inst-email" placeholder="you@yourdistrict.edu" required>
+          </div>
+          <button type="submit" class="btn btn-anchor login-submit">Sign in</button>
+        </form>
+
+        <p class="login-status" id="login-status"></p>
+
+        <p class="login-note">
+          Personal email addresses (Gmail, Yahoo, iCloud, and similar) are not accepted for teacher accounts.<br>
+          Don't have a district account yet? <a href="mailto:info@wholenesseducation.com">Contact us</a> to get your school or district set up.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <a href="index.html" class="brand">Wholeness <strong>Education</strong></a>
+      <p style="margin-top:10px; font-size:0.88rem; max-width:340px;">A global humanistic education platform dedicated<br>to cultivating the inner architecture of<br>the future human.</p>
+      <img src="images/we-logo-full.png" alt="Wholeness Education" class="footer-logo">
+    </div>
+    <div class="cols">
+      <div>
+        <h5>Pathways</h5>
+        <ul>
+          <li><a href="learning.html">For Youth</a></li>
+          <li><a href="parenting.html">For Parents</a></li>
+          <li><a href="educating.html">For Teachers</a></li>
+          <li><a href="schools.html">For Schools</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>About</h5>
+        <ul>
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="model.html">Our Model</a></li>
+          <li><a href="pathway-interconnections.html">Pathway Interconnections</a></li>
+          <li><a href="whole-human.html">The Whole Human</a></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="press.html">Press &amp; Media</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="mailto:info@wholenesseducation.com">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="bottom">
+    <span>© 2026 Wholeness Education Inc.</span>
+    <nav class="legal-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="data-privacy.html">Data Privacy &amp; Security</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var params = new URLSearchParams(window.location.search);
+    var title = params.get('title');
+    var tag = document.getElementById('course-tag');
+    if (title) {
+      tag.textContent = title;
+      tag.style.display = 'inline-block';
+    }
+
+    var form = document.getElementById('login-form');
+    var status = document.getElementById('login-status');
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var email = document.getElementById('inst-email').value.trim();
+      var personalDomains = ['gmail.com','yahoo.com','icloud.com','outlook.com','hotmail.com','aol.com'];
+      var domain = email.split('@')[1] ? email.split('@')[1].toLowerCase() : '';
+      if (personalDomains.indexOf(domain) !== -1) {
+        status.style.display = 'block';
+        status.style.color = 'var(--terracotta)';
+        status.textContent = 'Please use the email address issued by your school or district, not a personal account.';
+        return;
+      }
+      status.style.display = 'block';
+      status.style.color = 'var(--anchor)';
+      status.textContent = 'Accounts are being set up by your school or district administrator. Please contact your administrator for your login information.';
+    });
+  })();
+</script>
+
+</body>
+</html>
