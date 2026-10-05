@@ -1100,3 +1100,86 @@ footer .legal-links a:hover{text-decoration:underline; color:var(--warm-gold);}
 @media (max-width:540px){
   .echo-grid{grid-template-columns:1fr;}
 }
+
+/* ---------- Mobile polish ---------- */
+@media (min-width:861px){
+  .h1-oneline{white-space:nowrap;}
+}
+@media (max-width:860px){
+  section{padding:64px 0;}
+  .hero{padding:64px 0 56px;}
+  .hero p.lede{font-size:1.08rem;}
+  .intel-grid{grid-template-columns:1fr;}
+  .podcast-links{flex-wrap:wrap; justify-content:center;}
+  .pathway-chip{white-space:normal;}
+  footer .cols{gap:40px;}
+  footer p br, .podcast-body p br{display:none;}
+  footer .bottom{padding-left:32px; padding-right:32px;}
+  .mirror-table-wrap, .table-scroll{overflow-x:auto; -webkit-overflow-scrolling:touch;}
+}
+@media (max-width:540px){
+  .wrap{padding:0 22px;}
+  footer .bottom{padding-left:22px; padding-right:22px;}
+  section{padding:52px 0;}
+  .hero{padding:52px 0 44px;}
+  h1{font-size:clamp(2rem,9vw,2.4rem);}
+  h2{font-size:1.55rem;}
+  .card, .offer-card, .intel-card, .window-card, .inquiry-card, .press-card{padding-left:22px; padding-right:22px;}
+  .podcast-card{padding:26px 22px;}
+  footer .cols{flex-wrap:wrap; gap:32px 36px;}
+  footer .legal-links{flex-direction:column; gap:10px;}
+  .btn{max-width:100%;}
+  .hero .btn, .hero-actions .btn{display:inline-block;}
+}
+@media (max-width:860px){
+  .mirror-table th, .mirror-table td{padding:12px 12px; font-size:0.86rem;}
+  .mirror-table tbody th{white-space:normal;}
+  .mirror-table thead th{font-size:0.68rem; letter-spacing:0.03em;}
+}
+@media (max-width:600px){
+  .mirror-table, .mirror-table tbody, .mirror-table tr, .mirror-table th, .mirror-table td{display:block; width:100%;}
+  .mirror-table thead{display:none;}
+  .mirror-table tbody tr{margin-bottom:14px; border-radius:12px; overflow:hidden; border:1px solid rgba(28,43,34,0.1);}
+  .mirror-table tbody th{padding:12px 18px; font-size:1.02rem;}
+  .mirror-table td{display:flex; gap:14px; padding:11px 18px; font-size:0.92rem;}
+  .mirror-table td::before{content:attr(data-label); flex:0 0 66px; font-size:0.7rem; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; color:var(--stone); padding-top:3px;}
+}
+@media (max-width:600px){
+  .layer-frame{padding:46px 16px 18px; margin-top:44px;}
+  .layer-frame-label{left:14px; right:14px; top:-30px; flex-direction:column; align-items:flex-start; gap:2px; border-radius:16px; padding:8px 16px;}
+  .layer-tier{padding:22px 20px;}
+  .layer-tier.l1{padding-top:26px; padding-bottom:26px;}
+}
+
+/* Course cards: readable text beneath the photo on phones */
+.course-card .cc-text{display:none;}
+@media (max-width:860px){
+  a.course-card.has-cover{background:var(--white); display:flex; flex-direction:column; align-items:flex-start; justify-content:flex-start; overflow:hidden;}
+  .course-card.has-cover img{
+    width:176%; max-width:none; height:250px; aspect-ratio:auto; object-fit:cover; object-position:left 12%;
+    -webkit-mask-image:linear-gradient(to right,#000 0,#000 72%,transparent 96%); mask-image:linear-gradient(to right,#000 0,#000 72%,transparent 96%);
+  }
+  .course-card .cc-text{display:block; padding:16px 20px 20px; text-align:left;}
+  .course-card .cc-num{
+    display:inline-block; font-family:var(--font-display); font-size:0.82rem; letter-spacing:0.08em;
+    color:var(--anchor, var(--core-gold)); border:1.5px solid var(--anchor, var(--core-gold));
+    border-radius:999px; padding:2px 12px; margin-bottom:10px;
+  }
+  .course-card .cc-text strong{
+    display:block; font-family:var(--font-display); font-weight:500; font-size:1.12rem; line-height:1.25;
+    color:var(--night); margin-bottom:6px;
+  }
+  .course-card .cc-sub{display:block; font-size:0.92rem; line-height:1.5; color:var(--night); opacity:0.78;}
+}
+
+@media (max-width:540px){
+  /* Team: smaller portraits and tighter spacing */
+  .team-grid{gap:34px; margin-top:36px;}
+  .team-avatar, .team-avatar-photo{width:150px; height:150px; margin-bottom:14px;}
+  .team-avatar .icon{width:52px; height:52px;}
+  .team-card .name{font-size:1.4rem; margin-top:10px;}
+  /* Level timeline: stack the number above the content so cards use the full width */
+  .level-path::before{display:none;}
+  .level-item{flex-direction:column; gap:14px; padding:22px 0;}
+  .level-num{flex:0 0 48px; width:48px; height:48px; font-size:1.1rem;}
+}
