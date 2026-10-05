@@ -1216,3 +1216,4 @@ footer .legal-links a:hover{text-decoration:underline; color:var(--warm-gold);}
 
 .team-card .role{text-wrap:balance;}
 @media (max-width:420px){ .team-card .role{font-size:0.96rem;} }
+.team-card p{text-wrap:balance;}
