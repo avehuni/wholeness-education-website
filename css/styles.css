@@ -1213,3 +1213,6 @@ footer .legal-links a:hover{text-decoration:underline; color:var(--warm-gold);}
   .podcast-card .podcast-art-img{margin:0 auto;}
   .podcast-card .podcast-body{width:100%;}
 }
+
+.team-card .role{text-wrap:balance;}
+@media (max-width:420px){ .team-card .role{font-size:0.96rem;} }
