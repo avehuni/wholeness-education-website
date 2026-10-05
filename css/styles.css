@@ -1202,3 +1202,8 @@ footer .legal-links a:hover{text-decoration:underline; color:var(--warm-gold);}
   footer .bottom{align-items:center;}
   footer .legal-links{align-items:center;}
 }
+
+@media (max-width:860px){
+  .team-grid{margin-top:0;}
+  section:has(> .wrap > .team-grid){padding-top:24px;}
+}
