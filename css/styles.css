@@ -103,7 +103,7 @@ body[data-pathway] .site-nav{ --nav-surface: var(--anchor); }
   display:inline-flex; align-items:center; gap:10px;
 }
 .brand strong{font-weight:500;}
-.site-nav .brand-mark{height:30px; width:auto; display:block;}
+.site-nav .brand-mark{height:34px; width:auto; display:block;}
 footer .brand-mark{display:none;}
 .footer-logo{height:140px; width:auto; display:block; margin-top:26px;}
 .nav-links{display:flex; gap:34px; align-items:center;}
