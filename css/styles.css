@@ -1207,3 +1207,9 @@ footer .legal-links a:hover{text-decoration:underline; color:var(--warm-gold);}
   .team-grid{margin-top:0;}
   section:has(> .wrap > .team-grid){padding-top:24px;}
 }
+
+@media (max-width:760px){
+  .podcast-card{align-items:center;}
+  .podcast-card .podcast-art-img{margin:0 auto;}
+  .podcast-card .podcast-body{width:100%;}
+}
