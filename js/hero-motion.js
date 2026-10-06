@@ -16,9 +16,9 @@
   }
   function frame(now){
     var t=(now-t0)/1000;
-    ctx.fillStyle='#14201a'; ctx.fillRect(0,0,W,H);
+    ctx.fillStyle='#1E2226'; ctx.fillRect(0,0,W,H);
     var m=Math.max(W,H);
-    glow(W*(.25+.08*Math.sin(t*.11)),H*(.35+.1*Math.cos(t*.09)),m*.62,'46,92,70',.55);
+    glow(W*(.25+.08*Math.sin(t*.11)),H*(.35+.1*Math.cos(t*.09)),m*.62,'52,60,68',.7);
     glow(W*(.78+.07*Math.cos(t*.10)),H*(.62+.09*Math.sin(t*.12)),m*.55,'209,162,67',.30);
     glow(W*(.5+.1*Math.sin(t*.07)),H*(.1+.06*Math.cos(t*.08)),m*.45,'209,162,67',.2);
     // drifting gold particles
