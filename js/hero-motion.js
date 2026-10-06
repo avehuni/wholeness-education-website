@@ -1,0 +1,45 @@
+(function(){
+  var c=document.getElementById('heroMotion'); if(!c) return;
+  var ctx=c.getContext('2d'), dpr=Math.min(window.devicePixelRatio||1,2), W=0,H=0, parts=[], t0=performance.now();
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function resize(){
+    var r=c.getBoundingClientRect(); W=r.width; H=r.height;
+    c.width=W*dpr; c.height=H*dpr; ctx.setTransform(dpr,0,0,dpr,0,0);
+    var n=Math.round(Math.min(70,Math.max(26,W/20))); parts=[];
+    for(var i=0;i<n;i++) parts.push({x:Math.random()*W,y:Math.random()*H,r:Math.random()*2+.8,
+      v:Math.random()*.16+.05,a:Math.random()*.55+.2,p:Math.random()*6.28,s:Math.random()*.6+.3});
+  }
+  function glow(x,y,rad,col,al){
+    var g=ctx.createRadialGradient(x,y,0,x,y,rad);
+    g.addColorStop(0,'rgba('+col+','+al+')'); g.addColorStop(1,'rgba('+col+',0)');
+    ctx.fillStyle=g; ctx.fillRect(x-rad,y-rad,rad*2,rad*2);
+  }
+  function frame(now){
+    var t=(now-t0)/1000;
+    ctx.fillStyle='#14201a'; ctx.fillRect(0,0,W,H);
+    var m=Math.max(W,H);
+    glow(W*(.25+.08*Math.sin(t*.11)),H*(.35+.1*Math.cos(t*.09)),m*.62,'46,92,70',.55);
+    glow(W*(.78+.07*Math.cos(t*.10)),H*(.62+.09*Math.sin(t*.12)),m*.55,'209,162,67',.30);
+    glow(W*(.5+.1*Math.sin(t*.07)),H*(.1+.06*Math.cos(t*.08)),m*.45,'209,162,67',.2);
+    // slow gold arcs
+    ctx.save(); ctx.translate(W*.5,H*1.12); 
+    for(var k=0;k<3;k++){
+      var rr=m*(.62+k*.17)+Math.sin(t*.22+k)*8;
+      var a0=Math.PI*(1.12+.02*Math.sin(t*.12+k)), a1=Math.PI*(1.88+.02*Math.cos(t*.1+k));
+      var g=ctx.createLinearGradient(-rr,0,rr,0);
+      g.addColorStop(0,'rgba(209,162,67,0)'); g.addColorStop(.5,'rgba(244,214,140,'+(.85-k*.2)+')'); g.addColorStop(1,'rgba(209,162,67,0)');
+      ctx.strokeStyle=g; ctx.lineWidth=2-k*.5; ctx.beginPath(); ctx.arc(0,0,rr,a0,a1); ctx.stroke();
+    }
+    ctx.restore();
+    // drifting gold particles
+    for(var i=0;i<parts.length;i++){
+      var p=parts[i]; p.y-=p.v; p.x+=Math.sin(t*.25+p.p)*.12; if(p.y<-6){p.y=H+6;p.x=Math.random()*W;}
+      var tw=.55+.45*Math.sin(t*p.s*2+p.p);
+      glow(p.x,p.y,p.r*9,'244,214,140',p.a*.35*tw);
+      ctx.fillStyle='rgba(255,236,176,'+(p.a*tw)+')'; ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,6.283); ctx.fill();
+    }
+    if(!reduce) requestAnimationFrame(frame);
+  }
+  resize(); window.addEventListener('resize',resize);
+  if(reduce){ frame(performance.now()); } else { requestAnimationFrame(frame); }
+})();

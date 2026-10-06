@@ -1217,3 +1217,21 @@ footer .legal-links a:hover{text-decoration:underline; color:var(--warm-gold);}
 .team-card .role{text-wrap:balance;}
 @media (max-width:420px){ .team-card .role{font-size:0.96rem;} }
 .team-card p{text-wrap:balance;}
+
+/* Home hero: animated gold-light background */
+.hero-motion{position:relative;overflow:hidden;background:#14201a;padding:120px 0 104px;}
+.hero-motion canvas{position:absolute;inset:0;width:100%;height:100%;display:block;}
+.hero-motion::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(ellipse at 50% 46%,rgba(20,32,26,.62) 0%,rgba(20,32,26,.35) 45%,rgba(20,32,26,0) 78%);}
+.hero-motion .wrap{position:relative;z-index:2;}
+.hero-motion .eyebrow{color:var(--core-gold);}
+.hero-motion h1{color:#fff;}
+.hero-motion h1 em{color:var(--core-gold);}
+.hero-motion p.lede{color:#fff;opacity:.86;}
+.hero-motion .hero-meta{color:rgba(255,255,255,.7);}
+.hero-motion .btn-outline{color:#fff;border-color:rgba(255,255,255,.65);background:transparent;}
+.hero-motion .btn-outline:hover{background:rgba(255,255,255,.12);}
+.hero-motion .hero-meta{text-wrap:balance;}
+.hero-motion .lede,.hero-motion h1{text-wrap:balance;}
+@media (max-width:760px){.hero-motion{padding:84px 0 72px;}
+ .hero-motion .eyebrow{letter-spacing:.1em;font-size:.72rem;white-space:nowrap;}}
