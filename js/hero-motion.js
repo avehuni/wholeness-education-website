@@ -21,16 +21,6 @@
     glow(W*(.25+.08*Math.sin(t*.11)),H*(.35+.1*Math.cos(t*.09)),m*.62,'46,92,70',.55);
     glow(W*(.78+.07*Math.cos(t*.10)),H*(.62+.09*Math.sin(t*.12)),m*.55,'209,162,67',.30);
     glow(W*(.5+.1*Math.sin(t*.07)),H*(.1+.06*Math.cos(t*.08)),m*.45,'209,162,67',.2);
-    // slow gold arcs
-    ctx.save(); ctx.translate(W*.5,H*1.12); 
-    for(var k=0;k<3;k++){
-      var rr=m*(.62+k*.17)+Math.sin(t*.22+k)*8;
-      var a0=Math.PI*(1.12+.02*Math.sin(t*.12+k)), a1=Math.PI*(1.88+.02*Math.cos(t*.1+k));
-      var g=ctx.createLinearGradient(-rr,0,rr,0);
-      g.addColorStop(0,'rgba(209,162,67,0)'); g.addColorStop(.5,'rgba(244,214,140,'+(.85-k*.2)+')'); g.addColorStop(1,'rgba(209,162,67,0)');
-      ctx.strokeStyle=g; ctx.lineWidth=2-k*.5; ctx.beginPath(); ctx.arc(0,0,rr,a0,a1); ctx.stroke();
-    }
-    ctx.restore();
     // drifting gold particles
     for(var i=0;i<parts.length;i++){
       var p=parts[i]; p.y-=p.v; p.x+=Math.sin(t*.25+p.p)*.12; if(p.y<-6){p.y=H+6;p.x=Math.random()*W;}
