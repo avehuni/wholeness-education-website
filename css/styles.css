@@ -1235,3 +1235,15 @@ footer .legal-links a:hover{text-decoration:underline; color:var(--warm-gold);}
 .hero-motion .lede,.hero-motion h1{text-wrap:balance;}
 @media (max-width:760px){.hero-motion{padding:84px 0 72px;}
  .hero-motion .eyebrow{letter-spacing:.1em;font-size:.72rem;white-space:nowrap;}}
+
+/* Model page headline: one phrase per line on phones */
+@media (max-width:760px){
+  .ln{display:block; white-space:nowrap;}
+  .ln-br{display:none;}
+}
+
+/* Phones: balance headings and avoid single-word last lines */
+@media (max-width:860px){
+  h1,h2,h3{text-wrap:balance;}
+  p,li,.lede{text-wrap:pretty;}
+}
