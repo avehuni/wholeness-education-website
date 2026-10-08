@@ -1247,3 +1247,8 @@ footer .legal-links a:hover{text-decoration:underline; color:var(--warm-gold);}
   h1,h2,h3{text-wrap:balance;}
   p,li,.lede{text-wrap:pretty;}
 }
+
+/* Home hero: "future human" soft gold pulse */
+.hero-motion h1 .fh{display:inline-block;white-space:nowrap;color:#fff;animation:fhpulse 3.2s ease-in-out infinite}
+@keyframes fhpulse{0%,100%{text-shadow:0 0 0 rgba(232,188,91,0)}50%{text-shadow:0 0 26px rgba(232,188,91,.85),0 0 6px rgba(247,222,149,.6)}}
+@media (prefers-reduced-motion:reduce){.hero-motion h1 .fh{animation:none;text-shadow:0 0 18px rgba(232,188,91,.55)}}
