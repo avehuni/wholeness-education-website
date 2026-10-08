@@ -1255,4 +1255,3 @@ footer .legal-links a:hover{text-decoration:underline; color:var(--warm-gold);}
 
 /* Proprietary / confidential notes */
 .rail-note.rail-confidential{margin-top:10px;font-size:0.78rem;opacity:.7;line-height:1.5}
-.proprietary-note{font-size:0.82rem;opacity:.65;text-align:center;max-width:620px;margin:0 auto;text-wrap:balance}
